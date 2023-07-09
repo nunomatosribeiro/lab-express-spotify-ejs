@@ -1,0 +1,13 @@
+
+
+<% if( typeof results !== 'undefined'){ %>
+<p>Type a name</p>
+<% } else { %>
+<% results.forEach((artist) => {%>
+<div id='artist'>
+  <h2> <%= artist.name %></h2>
+  <img src=<%= artist.img.map %> alt='<%= artist.name%>'>
+  <a href='/albums/<%= artist.id %>'>Albums</a>
+</div>
+<% }) %>
+<% } %>
